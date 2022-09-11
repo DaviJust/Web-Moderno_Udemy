@@ -1,4 +1,4 @@
-let idade = 31;
+let idade = 34;
     console.log(typeof 31);
     console.log(typeof idade);
 
