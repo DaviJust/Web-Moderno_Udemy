@@ -13,9 +13,4 @@ h1 {
     font-style: italic;
 }
 
-#borderimg3 {
-border: 10px solid transparent;
-padding: 15px;
-border-image: url(borboleta_Borda.png) round;
-border-image-slice: 11%;
-}
+

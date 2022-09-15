@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <style>
+<head> <!-- Aqui contem todos os estilos da borda do descritivo, e da barra que aparece quando a pagina é movida para baixo-->
+  <style> 
+    #borboleta_borda {
+border: 10px solid transparent;
+padding: 15px;
+border-image: url(pastaImagens/borboleta_borda.png) repeat  ;
+border-image-slice: 13%;
+}
     #navbar {
       background-color: rgb(255, 253, 253);
       position: fixed;
@@ -37,13 +43,14 @@
             <body>
                 <body>
                  
-                </h1>
+                </h1> <!---Aqui contem meu descritivo-->
                     <body style="background-color:rgb(0, 0, 0)"></body>
-                    <img src="Borboleta.jpg" alt="Borboleta">
-                    <p id="borderimg3">
-                      Meu nome e davi.Atualmente estudando programacao pelas instituicoes Resilia e Senac(Faco parte da iniciativa "Programadores cariocas"), tambem estou estudando para o vestibular da UERJ, e assim me especializar mais na area da programacao e conhecer outras por intermedio da faculdade.
-                     </p>
-                        <div id="navbar">
+                    <img src="pastaImagens/Borboleta.jpg" alt="Borboleta">
+                    <p id="borboleta_borda">
+                      Trabalho 01 da Resilia.<br>
+                      Nome: Davi Justino Marques Couto<br>
+                      Atualmente estudando programação pelas instituições Resilia e Senac -Faço parte da iniciativa "Programadores cariocas", mas estudo para o vestibular da UERJ, dessa forma, poderei me especializar mais ainda nessa area, além de conhecer outras            </p>
+                        <div id="navbar"> <!---Os dois arquivos constam na mesma pasta, atraves do href direcionou para formulario e os cursos que ja fiz(Relevantes para Ti)-->
           <a href="Cursos.html">Cursos</a>
           <a href="Contato.html">Contato</a>
         </div>
@@ -52,7 +59,7 @@
         </div>
         
         <script>
-        // When the user scrolls down 20px from the top of the document, slide down the navbar
+        // Assim que o usuario mover a pagina para baixo vai aparecer a tabela
         window.onscroll = function() {scrollFunction()};
         
         function scrollFunction() {
