@@ -1,4 +1,6 @@
 .Paginainicial {
-    text-align: left;
-    border: solid;
+    font-weight: bold;
+                            color: aliceblue;
+                            font-size: small;   
+                            font-style: italic;
   }
