@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head> <!-- Aqui contem todos os estilos da borda do descritivo, e da barra que aparece quando a pagina é movida para baixo-->
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="estilos.css">
+<title>Trabalho 01(Individual)</title>
+</head> 
+<body>
+ </h1> <!---Aqui contem meu descritivo-->
+ <img src="pastaImagens/Borboleta.jpg" alt="Borboleta">
+ <p id="borboleta_borda">
+   Trabalho 01 da Resilia.<br>
+   Nome: Davi Justino Marques Couto<br>
+   Atualmente estudando programação pelas instituições Resilia e Senac -Faço parte da iniciativa "Programadores cariocas", mas estudo para o vestibular da UERJ, dessa forma, poderei me especializar mais ainda nessa area, além de conhecer outras             
+  <br> Hobby: Escutar musica 
+ </p>
+   <div id="navbar"> <!---Os dois arquivos constam na mesma pasta, atraves do href direcionou para formulario e os cursos que ja fiz(Relevantes para Ti)-->
+       <a href="Cursos.html">Cursos</a>
+       <a href="Contato.html">Contato</a>
+     </div>
+     
+     <div style="padding:15px 15px 2500px;font-size:30px">
+     </div>
+     
+     <script>
+     // Assim que o usuario mover a pagina para baixo vai aparecer a tabela
+     window.onscroll = function() {scrollFunction()};
+     
+     function scrollFunction() {
+       if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+         document.getElementById("navbar").style.top = "0";
+       } else {
+         document.getElementById("navbar").style.top = "-50px";
+       }
+     }
+     </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>

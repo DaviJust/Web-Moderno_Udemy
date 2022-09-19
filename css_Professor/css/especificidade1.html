@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Especificidade CSS</title>
+    <style>
+        /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity */
+        /*
+        
+        Em linhas gerais...
+
+        1. regra com !important -Chama ele primeiro, mas tente evitar para manter o CSS o mais limpo possivel
+        2. Seletores mais especificos sao processados primeiro
+        3. ultima regra processada (empate)
+        
+        
+        
+        
+        */
+        body {
+            background-color: black;
+        }
+        p {
+            background-color: gray;
+        }
+
+        .observacao {
+            background-color: black;
+            border: dashed 5px;
+            padding: 200px !important;
+            font-size: 40px;
+        }
+        p.observacao {
+            color: aliceblue;
+            padding: 2px 60px;
+            background: linear-gradient(to right,rgb(170, 123, 123), rgb(56, 232, 255));
+        }
+    </style>
+</head>
+
+<body>
+    <p class='observacao'>Olha essa observação!!!!</p>
+</body>
+
+</html>

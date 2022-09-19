@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+
+/*Fonte usada no site*/
+body {
+  background-color: #000;
+}
+
+/* Estilo da parte de cima */
+body {
+  font-family: Arial;
+  font-size: 17px;
+  color: #f1f1f1;
+}
+
+.container {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+  margin-left: 20%;
+}
+
+.container img {vertical-align: middle;}
+
+.container .content {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 100px;
+}
+
+/*Estilo da barra de opcoes*/
+body {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: #000000;
+  position: fixed;
+  height: 90%;
+  overflow: auto;
+}
+
+li a {
+ 
+  display: block;
+  color: rgb(255, 255, 255);
+  padding: 4px 4px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: #ce8d6f;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: rgb(180, 220, 235);
+}
