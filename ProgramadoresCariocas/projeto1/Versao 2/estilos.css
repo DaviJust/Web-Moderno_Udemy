@@ -1,3 +1,6 @@
+strong {
+  color: rgb(245, 243, 243);
+}
 * {
   box-sizing: border-box;
 }
@@ -5,14 +8,12 @@
 /*Fonte usada no site*/
 body {
   background-color: #000;
-}
-
-/* Estilo da parte de cima */
-body {
   font-family: Arial;
   font-size: 17px;
   color: #f1f1f1;
 }
+
+/* Estilo da parte de cima */
 
 .container {
   position: relative;
@@ -21,13 +22,10 @@ body {
   margin-left: 20%;
 }
 
-.container img {vertical-align: middle;}
 
 .container .content {
   position: absolute;
   bottom: 0;
-  background: rgb(0, 0, 0); /* Fallback color */
-  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
   color: #f1f1f1;
   width: 100%;
   padding: 100px;
@@ -42,27 +40,43 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 25%;
-  background-color: #000000;
+  width: 20%;
+  position: static;
   position: fixed;
-  height: 90%;
+  height: 1000%;
   overflow: auto;
 }
 
 li a {
  
   display: block;
+  position: static;
   color: rgb(255, 255, 255);
   padding: 4px 4px;
   text-decoration: none;
 }
 
 li a.active {
-  background-color: #ce8d6f;
-  color: white;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
 }
 
 li a:hover:not(.active) {
-  background-color: #555;
-  color: rgb(180, 220, 235);
+  background-color: rgb(93, 107, 124);
+  color: rgb(248, 253, 255);
 }
+
+/* formulario */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+}
+
+input[type=submit] {
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+}
+

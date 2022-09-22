@@ -5,7 +5,22 @@
     <meta charset="UTF-8">
     <title>Box Model</title>
     <style>
-        /* ... */
+        body { font-size: 80px; margin: 0;}
+        .c1 {background-color: rgb(100, 98, 209);}
+        .c2 {background-color: blue;}
+        .c3 {background-color: green;}
+        .c4 {background-color: yellow;}
+
+        div {
+            padding-top: 100px;
+            padding: 40px 20px 10px 40px;
+            width: 100px;
+        }
+        .c3,.c4 > div {
+            padding-top: 100px;
+            padding: 40px 20px 10px 40px;
+            width: 100px;
+        }
     </style>
 </head>
 
@@ -13,6 +28,8 @@
     <div class="c1">1</div>
     <div class="c2">2</div>
     <div class="c3">3</div>
+    <div class="c4">4</div>
+
 </body>
 
 </html>
