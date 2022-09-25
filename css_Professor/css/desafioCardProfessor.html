@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio Card</title>
+    <style>
+        .curso {
+            display:inline-block; 
+            /* tambem podia ter usado o display: inline, isso fara com que ambos fiquem um do lado do outro */
+            font-family: Verdana, sans-serif;
+            /* fonte do texto principal */
+            border: solid 1px #ccc;
+            /* borda o negocio, o tamanho */
+            box-shadow: 0 4px 20px 0 rgb(52, 45, 46);
+            /* escuridao da borda */
+            height: 300px;
+            /* altura do quadrado */
+            width: 260px;
+            /* largura do quadrado */
+            margin: 5px 20px;
+            /* margem para caber a imagem e ter um espaco */
+            padding: 5px;
+            /* padding para adicionar espaco entre os dois quadrados */
+        }
+
+        .cursoimg{
+            width: 100%;
+            /* Caber 100% da imagem no quadrado */
+            max-height: 50%;
+            /*altura maximo da imagem, para caber melhor no quadrado */
+
+        }
+        .curso-info {
+            padding: 10px;
+            /* adicinar espaco para a descricao do curso(titulo) */
+            height: 90px;
+            /*ajusta a altura do texto*/
+            overflow: hidden;
+            /* esconde os texto que estao sobrepostos    */
+        }
+        .curso-preco {
+            float:right;
+            padding: 10px;
+        }
+        .preco-de {
+            text-decoration: line-through;
+            /* corta o texto */
+            color: firebrick;
+            /* adicionar a cor vermelho tijolo ao texto */
+        }
+        .preco-por {
+            color:green;
+            /* cor do texto */
+            font-weight:bold;
+            /* Grossura da fonte */
+            font-size:1.4em;
+            /* tamanho da fonte comparada aos outros texto(fontes) */
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Card</h1>
+
+    <h2>Objetivo</h2>
+    <img src="http://files.cod3r.com.br/curso-web/card.png" height="340" alt="Objetivo">
+
+    <h2>Resultado</h2>
+    <div>
+        <div class="curso">
+            <img src="http://files.cod3r.com.br/curso-web/curso1.jpg" height="140"  />
+            <div class="curso-info">
+                <h4>Docker: Ferramenta essencial para Desenvolvedores</h4>
+            </div>
+            <div class="curso-preco">
+                <span class="preco-de">R$80,00</span>
+                <span class="preco-por">R$50,00</span>
+            </div>
+        </div>
+        <div class="curso">
+            <img src="http://files.cod3r.com.br/curso-web/curso2.jpg"height="140" />
+            <div class="curso-info">
+                <h4>Web Moderno com Javascript + Projetos</h4>
+                <p >Prof. Sicrano Filho</p>
+            </div>
+            <div class="curso-preco">
+                <span class="preco-de">R$80,00</span>
+                <span class="preco-por">R$50,00</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
