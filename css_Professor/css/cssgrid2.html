@@ -9,7 +9,7 @@
         body {
             margin: 20px;
             height: calc(100% - 40px);
-            background-color: lightgray;
+            background-color: rgb(15, 11, 11);
         }
         
         div {
@@ -17,8 +17,20 @@
             align-items: center;
             justify-content: center;
             font-size: 30px;
-            border: solid 5px dodgerblue;
-            background: #fff;
+            border: solid 5px rgb(79, 48, 69);
+            background: rgb(65, 60, 60);
+        }
+        body {
+            display: grid;
+            grid-template-columns: 
+            [inicio] 1fr 1fr 1fr
+            [metade-1 meio-1] 1fr 
+            [metade-2 meio-2] 1fr [fim];
+            grid-template-rows: repeat(3, 1fr) ;
+        }
+        .d1 {
+            grid-column: metade-2;
+            grid-column-end: fim;
         }
     </style>
 </head>
