@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Grid #01</title>
+    <style>
+         *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            font-family: "Oswald", sans-serif;
+            background-color: rgb(46, 42, 42);}
+        html,
+        body {
+            margin: 20px;
+            height: calc(100% - 40px);
+            background-color: rgb(42, 34, 34);
+            
+        }
+        
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            padding: 200px;
+            background: rgb(152, 136, 136);
+        }
+
+        .d1,.d2,.d3,.d4,.d5,.d6,.d7,.d8,.d9,.d10, .d11, .d12{
+            float:left;
+            color:black;
+            border-style:groove;
+            border-radius: 20px;
+            background-color: pink;
+            padding: 10px 10px;
+            margin: 10px 10px;
+            width: 250px;
+            height: 330px;
+            font-size: 20px;
+            grid-template-columns: 50% 50%;
+            margin: 5px 20px;
+            position:flex;
+            display: grid;
+            margin: 20px 20px 20px;
+            border:20px;
+            border-radius: 20px;
+            display:inline-block; 
+            /* tambem podia ter usado o display: inline, isso fara com que ambos fiquem um do lado do outro */
+            font-family: Verdana, sans-serif;
+            /* fonte do texto principal */
+            border: solid 1px #ccc;
+            /* borda o negocio, o tamanho */
+            box-shadow: 0 4px 20px 0 rgb(52, 45, 46);
+            /* escuridao da borda */
+            height: 300px;
+            /* altura do quadrado */
+            width: 260px;
+            /* largura do quadrado */
+            margin: 5px 20px;
+            /* margem para caber a imagem e ter um espaco */
+            padding: 5px;
+            /* padding para adicionar espaco entre os dois quadrados */
+        }
+        .cabecalho{
+            background-color: #333;
+            border-bottom: solid 5px #4faddb;
+            height: 80px;
+            box-sizing: content-box;
+        }
+        .logo{
+            display: inline-block;
+            height: 80px;
+            padding: 15px;
+        }
+        .log img{
+            height: 100%;
+        }
+        .menu-toggle{
+            float:right;
+            color:white;
+            background-color: rgb(0, 0, 0);
+            border: solid 1px rgb(0, 0, 0);
+            border-radius: 5px;
+            height: 40px;
+            padding: 10px 20px;
+            margin: 20px 15px;
+        }
+        .menu{
+            display: inline-block;
+            vertical-align: top;
+            height: 80px;
+        }
+        .menu li{
+            display:inline-block;
+        }
+        .cabecalho a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.3em;
+            padding: 15px;
+        }
+        /* Altera a altura das letras do cabeçalho */
+        .menu a{
+            padding: 15px;
+
+        }        
+    </style>
+</head>
+<header class="cabecalho">
+    <div class="logo">
+        <a href="#inicio">
+            <img src="http://files.cod3r.com.br/curso-web/logo.png" alt="Logo" height="40px" and width="200px" />
+        </a>
+    </div>
+    <nav class="menu">
+        <ul>
+            <li>
+                <a href="#inicio" class="selected">Início</a>
+            </li>
+            <li>
+                <a href="#cursos">Cursos</a>
+            </li>
+            <li>
+                <a href="#sobre">Sobre</a>
+            </li>
+            <li>
+                <a href="#contato">Contato</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <div class="d1">
+        <img src="http://files.cod3r.com.br/curso-web/curso1.jpg" height="140"  /> 
+    </div>
+
+
+
+</body>
+
+</html>
