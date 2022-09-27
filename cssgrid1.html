@@ -4,55 +4,89 @@
 <head>
     <meta charset="UTF-8">
     <title>CSS Grid #01</title>
+    <!-- para colocar no css -->
     <style>
-         *{
+        /* * = Seletor universal; ou seja, sera adicionado border-box aos elementos para haver espaçamento */
+        * {
             box-sizing: border-box;
         }
-        body{
-            margin: 0;
-            font-family: "Oswald", sans-serif;
-            background-color: rgb(46, 42, 42);}
-        html,
+
+        /* Adicionara no corpo a posicao, margem 0 colocaria os objetos em seus respectivos lados, por exemplo o cabeçalho deve ficar em cima, sem margem */
         body {
-            margin: 20px;
-            height: calc(100% - 40px);
-            background-color: rgb(42, 34, 34);
-            
-        }
-        
-        div {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 30px;
-            padding: 200px;
-            background: rgb(152, 136, 136);
+            margin: 0;
+            background-color: rgb(46, 42, 42);
         }
 
-        .d1{
-            float:left;
-            color:black;
-            border-style:groove;
+        /* Adicionar mais itens que garantem o espaçamento, caso nao precise, deixe desse jeito, o div so decidira a cor do cabeçalho */
+        div {
+            background: rgb(152, 136, 136);
+        }
+                /*Configuracao da imagem*/
+                .logo {
+            display: inline-block;
+            /*Sera necessario inline para manter a imagem dentro do cabecalho, e o block sera para fazer o espaco da logo funcionar*/
+            height: 80px;
+            /*Aqui definimos a altura da caixa*/
+            padding: 15px;
+            /*Aqui definimos a largura da caixa*/
+        }
+
+        .menu {
+            /*Configuracao do menu, para colocar ele em ordem */
+            display: inline-block;
+            /*Criara o espacamento atraves das boxes*/
+            vertical-align: top;
+            /*Se alinhara no topo*/
+            height: 80px;
+            /*Tamanho de cada bloco*/
+        }
+
+        .menu li {
+            /*Configuracao do menu, para colocar ele em ordem */
+            display: inline-block;
+        }
+
+        .cabecalho a {
+            /*Edicao dos nomes dos cabecalhos*/
+            text-decoration: none;
+            color: white;
+            font-size: 1.3em;
+            padding: 15px;
+        }
+
+        /* Altera a altura das letras do cabeçalho */
+        .menu a {
+            padding: 15px;
+
+        }
+
+        /* Edicao do Grid para criar os espaçamentos entre os produtos, a */
+        .d1 {
+            float: left;
+            /*O item vai comecar no canto esquerdo no tipo box(confome falado no comentario do estrela(*), essa classe se refere aos cards) */
+            color: black;
+            /*A cor do texto sera preta */
+            border-style: groove;
+            /*Estilo da borda */
             border-radius: 20px;
+            /*margem da borda que criara um espaco dentro do elemento */
             background-color: pink;
+            /*Cor do quadradinho do card */
             padding: 10px 10px;
+            /*espaçamento entre elemento e margem */
             margin: 10px 10px;
+            /*margem para garantir espaco entre os cards */
             width: 250px;
+            /*largura da box(nesse caso do card) */
             height: 330px;
+            /*altura do box(nessa caso do card) */
             font-size: 20px;
-            grid-template-columns: 50% 50%;
-            margin: 5px 20px;
-            position:flex;
+            /*Tamanho da fonte dentro dessa classe */
+            /*Parte do Grid */
             display: grid;
-            margin: 20px 20px 20px;
-            border:20px;
-            border-radius: 20px;
-            display:inline-block; 
-            /* tambem podia ter usado o display: inline, isso fara com que ambos fiquem um do lado do outro */
-            font-family: Verdana, sans-serif;
-            /* fonte do texto principal */
-            border: solid 1px #ccc;
-            /* borda o negocio, o tamanho */
+            /*Ativa o grid para comecar a estilazar os boxes, que serao os cards, em cadeia,*/
+            grid-template-columns: 50% 50%;
+            /*define relacao largura e altura entre os quadrados que serao os grids, entre cada grid tera essa relacao de 50, 50, garantindo cards homogenios com apenas uma classe */
             box-shadow: 0 4px 20px 0 rgb(52, 45, 46);
             /* escuridao da borda */
             height: 300px;
@@ -64,60 +98,40 @@
             padding: 5px;
             /* padding para adicionar espaco entre os dois quadrados */
         }
-        .cabecalho{
+
+        /* Nessa parte sera tratado o cabeçalho, do qual condiz o menu */
+        .cabecalho {
             background-color: #333;
+            /* cor do menu */
             border-bottom: solid 5px #4faddb;
+            /* A borda que aparece bem embaixozinho */
             height: 80px;
+            /* o tamanho do cabeçalho */
             box-sizing: content-box;
         }
-        .logo{
-            display: inline-block;
-            height: 80px;
-            padding: 15px;
-        }
-        .log img{
-            height: 100%;
-        }
-        .menu-toggle{
-            float:right;
-            color:white;
-            background-color: rgb(0, 0, 0);
-            border: solid 1px rgb(0, 0, 0);
-            border-radius: 5px;
-            height: 40px;
-            padding: 10px 20px;
-            margin: 20px 15px;
-        }
-        .menu{
-            display: inline-block;
-            vertical-align: top;
-            height: 80px;
-        }
-        .menu li{
-            display:inline-block;
-        }
-        .cabecalho a {
-            text-decoration: none;
-            color: white;
-            font-size: 1.3em;
-            padding: 15px;
-        }
-        /* Altera a altura das letras do cabeçalho */
-        .menu a{
-            padding: 15px;
 
-        }        
+        .cardProduto {
+            display: inline-block;
+            /*Importantissimo para manter o texto embaixo, é o preco tambem, se nao, nao havera espaçamento correto */
+            height: 150px;
+            /*Tamanho da imagem */
+            padding: 15px;
+            /*espaçamento da imagem com o box, que nesse caso é  o grid */
+        }
+
+
     </style>
 </head>
 <header class="cabecalho">
     <div class="logo">
         <a href="#inicio">
-            <img src="http://files.cod3r.com.br/curso-web/logo.png" alt="Logo" height="40px" and width="200px" />
+            <img src="http://files.cod3r.com.br/curso-web/logo.png" alt="Logo" height="40px" and width="190px" />
         </a>
     </div>
-    <nav class="menu">
+    <nav class="menu"> 
+        <!-- O Elemento HTML de Navegação (<nav>) representa uma seção de uma página que aponta para outras páginas ou para outras áreas da página, ou seja, uma seção com links de navegação. -->
         <ul>
-            <li>
+            <li> <!---Aqui iniciara a lista com as classes e etc..-->
                 <a href="#inicio" class="selected">Início</a>
             </li>
             <li>
@@ -132,9 +146,10 @@
         </ul>
     </nav>
 </header>
+
 <body>
-    <div class="d1">
-        <img src="http://files.cod3r.com.br/curso-web/curso1.jpg" height="140"  /> 
+    <div class="d1"> <!--Aqui iniciara o card-->
+        <img class="cardProduto" src="http://files.cod3r.com.br/curso-web/curso1.jpg" />
     </div>
 
 
