@@ -1,11 +1,7 @@
-//Definindo a altura com o prompt
 altura = prompt("Qual a sua altura ?");
-//Definindo o peso com o prompt
 peso = prompt("Qual o seu peso ?");
-//Calculando o IMC
 imc = (peso/(altura * altura));
 
-// Fazendo a função dizer a sua situação com base no IMC calculado antes
 function calculoImc(altura,peso,imc)
 {
    if(imc >= 40)
