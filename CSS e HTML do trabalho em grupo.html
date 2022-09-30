@@ -21,8 +21,9 @@
         div {
             background: rgb(152, 136, 136);
         }
-                /*Configuracao da imagem*/
-                .logo {
+
+        /*Configuracao da imagem*/
+        .logo {
             display: inline-block;
             /*Sera necessario inline para manter a imagem dentro do cabecalho, e o block sera para fazer o espaco da logo funcionar*/
             height: 80px;
@@ -64,33 +65,17 @@
         .d1 {
             float: left;
             /*O item vai comecar no canto esquerdo no tipo box(confome falado no comentario do estrela(*), essa classe se refere aos cards) */
-            color: black;
-            /*A cor do texto sera preta */
-            border-style: groove;
-            /*Estilo da borda */
-            border-radius: 20px;
-            /*margem da borda que criara um espaco dentro do elemento */
-            background-color: pink;
-            /*Cor do quadradinho do card */
-            padding: 10px 10px;
-            /*espaçamento entre elemento e margem */
-            font-size: 20px;
-            /*Tamanho da fonte dentro dessa classe */
-            /*Parte do Grid */
+
             display: grid;
             /*Ativa o grid para comecar a estilazar os boxes, que serao os cards, em cadeia,*/
             grid-template-columns: 50% 50%;
             /*define relacao largura e altura entre os quadrados que serao os grids, entre cada grid tera essa relacao de 50, 50, garantindo cards homogenios com apenas uma classe */
-            box-shadow: 0 4px 20px 0 rgb(52, 45, 46);
-            /* escuridao da borda */
-            height: 300px;
-            /*altura do box(nessa caso do card) */
-            width: 260px;
-            /*largura da box(nesse caso do card) */
-            margin: 5px 20px;
-            /* margem para caber a imagem e ter um espaco */
-            padding: 5px;
-            /* padding para adicionar espaco entre os dois quadrados */
+            left: calc(50% - 271px/2 - 76.5px);
+top: calc(50% - 307px/2 + 387px);
+            width: 243px;
+            height: 309px;
+            background: #941C1C;
+                        border: 1px solid #010000;
         }
 
         /* Nessa parte sera tratado o cabeçalho, do qual condiz o menu */
@@ -107,13 +92,11 @@
         .cardProduto {
             display: inline-block;
             /*Importantissimo para manter o texto embaixo, é o preco tambem, se nao, nao havera espaçamento correto */
-            height: 150px;
+            height: 180px;
             /*Tamanho da imagem */
             padding: 15px;
             /*espaçamento da imagem com o box, que nesse caso é  o grid */
         }
-
-
     </style>
 </head>
 <header class="cabecalho">
@@ -122,10 +105,11 @@
             <img src="http://files.cod3r.com.br/curso-web/logo.png" alt="Logo" height="40px" and width="190px" />
         </a>
     </div>
-    <nav class="menu"> 
+    <nav class="menu">
         <!-- O Elemento HTML de Navegação (<nav>) representa uma seção de uma página que aponta para outras páginas ou para outras áreas da página, ou seja, uma seção com links de navegação. -->
         <ul>
-            <li> <!---Aqui iniciara a lista com as classes e etc..-->
+            <li>
+                <!---Aqui iniciara a lista com as classes e etc..-->
                 <a href="#inicio" class="selected">Início</a>
             </li>
             <li>
@@ -142,8 +126,9 @@
 </header>
 
 <body>
-    <div class="d1"> <!--Aqui iniciara o card-->
-        <img class="cardProduto" src="http://files.cod3r.com.br/curso-web/curso1.jpg" />
+    <div class="d1">
+        <!--Aqui iniciara o card-->
+        <img class="cardProduto" src="brownie-com-chocolate-em-barra-e1652917256460-1200x900.jpg" />
     </div>
 
 
