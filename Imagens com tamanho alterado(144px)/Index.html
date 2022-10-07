@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Grid #01</title>
+    <!-- para colocar no css Grid-Gap vai adicionar espaco entre os boxes-->
+    <style>
+        /* * = Seletor universal; ou seja, sera adicionado border-box aos elementos para haver espaçamento */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Adicionara no corpo a posicao, margem 0 colocaria os objetos em seus respectivos lados, por exemplo o cabeçalho deve ficar em cima, sem margem */
+        body {
+            margin: 0;
+            background-color: rgb(46, 42, 42);
+        }
+
+        /* Adicionar mais itens que garantem o espaçamento, caso nao precise, deixe desse jeito, o div so decidira a cor do cabeçalho */
+        div {
+            background: rgb(152, 136, 136);
+        }
+                /*Configuracao da imagem*/
+                .logo {
+            display: inline-block;
+            /*Sera necessario inline para manter a imagem dentro do cabecalho, e o block sera para fazer o espaco da logo funcionar*/
+            height: 80px;
+            /*Aqui definimos a altura da caixa*/
+            padding: 15px;
+            /*Aqui definimos a largura da caixa*/
+        }
+
+        .menu {
+            /*Configuracao do menu, para colocar ele em ordem */
+            display: inline-block;
+            /*Criara o espacamento atraves das boxes*/
+            vertical-align: top;
+            /*Se alinhara no topo*/
+            height: 80px;
+            /*Tamanho de cada bloco*/
+        }
+
+        .menu li {
+            /*Configuracao do menu, para colocar ele em ordem */
+            display: inline-block;
+        }
+
+        .cabecalho a {
+            /*Edicao dos nomes dos cabecalhos*/
+            text-decoration: none;
+            color: white;
+            font-size: 1.3em;
+            padding: 15px;
+        }
+
+        /* Altera a altura das letras do cabeçalho */
+        .menu a {
+            padding: 15px;
+
+        }
+
+        /* Edicao do Grid para criar os espaçamentos entre os produtos, a */
+        .d1 {
+            float: left;
+            /*O item vai comecar no canto esquerdo no tipo box(confome falado no comentario do estrela(*), essa classe se refere aos cards) */
+            color: black;
+            /*A cor do texto sera preta */
+            border-style: groove;
+            /*Estilo da borda */
+            border-radius: 20px;
+            /*margem da borda que criara um espaco dentro do elemento */
+            background-color: #5c1d06;
+            /*Cor do quadradinho do card */
+            font-size: 20px;
+            /*Tamanho da fonte dentro dessa classe */
+            /*Parte do Grid */
+            display: grid;
+            /*Ativa o grid para comecar a estilazar os boxes, que serao os cards, em cadeia,*/
+            grid-template-columns: 50% 50%;
+            /*define relacao largura e altura entre os quadrados que serao os grids, entre cada grid tera essa relacao de 50, 50, garantindo cards homogenios com apenas uma classe */
+            box-shadow: 4px 7px 17px 7px rgb(147 92 14 / 65%);
+            /* escuridao da borda */
+            height: 300px;
+            /*altura do box(nessa caso do card) */
+            width: 260px;
+            /*largura da box(nesse caso do card) */
+            margin: 5px 20px;
+            /* margem para caber a imagem e ter um espaco */
+            padding: 5px;
+            /* padding para adicionar espaco entre os dois quadrados */
+            justify-items: start;
+            align-content: space-between;
+        }
+
+        /* Nessa parte sera tratado o cabeçalho, do qual condiz o menu */
+        .cabecalho {
+            background-color: #333;
+            /* cor do menu */
+            border-bottom: solid 5px #4faddb;
+            /* A borda que aparece bem embaixozinho */
+            height: 80px;
+            /* o tamanho do cabeçalho */
+            box-sizing: content-box;
+        }
+
+        .cardProduto {
+            display: inline-block;
+            /*Importantissimo para manter o texto embaixo, é o preco tambem, se nao, nao havera espaçamento correto */
+            height: 150px;
+            /*Tamanho da imagem */
+            padding: 15px;
+            /*espaçamento da imagem com o box, que nesse caso é  o grid */
+        }
+
+
+    </style>
+</head>
+<header class="cabecalho">
+    <div class="logo">
+        <a href="#inicio">
+            <img src="http://files.cod3r.com.br/curso-web/logo.png" alt="Logo" height="40px" and width="190px" />
+        </a>
+    </div>
+    <nav class="menu"> 
+        <!-- O Elemento HTML de Navegação (<nav>) representa uma seção de uma página que aponta para outras páginas ou para outras áreas da página, ou seja, uma seção com links de navegação. -->
+        <ul>
+            <li> <!---Aqui iniciara a lista com as classes e etc..-->
+                <a href="#inicio" class="selected">Início</a>
+            </li>
+            <li>
+                <a href="#cursos">Cursos</a>
+            </li>
+            <li>
+                <a href="#sobre">Sobre</a>
+            </li>
+            <li>
+                <a href="#contato">Contato</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+    <div class="d1"> <!--Aqui iniciara o card-->
+        <img class="cardProduto" src="Barra.png" />
+
+    </div>
+    <div class="d1"> <!--Aqui iniciara o card-->
+        <img class="cardProduto" src="Tablet.png" />
+        
+    </div>
+    <div class="d1"> <!--Aqui iniciara o card-->
+        <img class="cardProduto" src="Ovo.png" />
+        
+    </div>
+    <div class="d1"> <!--Aqui iniciara o card-->
+        <img class="cardProduto" src="cupcake.png" />
+        
+    </div>
+    <div class="d1"> <!--Aqui iniciara o card-->
+        <img class="cardProduto" src="Bolo 1.png" />
+        
+    </div>
+    <div class="d1"> <!--Aqui iniciara o card-->
+        <img class="cardProduto" src="Bolo 2.png" />
+        
+    </div>
+    <div class="d1"> <!--Aqui iniciara o card-->
+        <img class="cardProduto" src="Bolo 3.png" />
+        
+    </div>
+    <div class="d1"> <!--Aqui iniciara o card-->
+        <img class="cardProduto" src="Caixa.png" />
+    </div>
+    </div>
+
+
+
+</body>
+
+</html>
