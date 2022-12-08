@@ -1,3 +1,3 @@
-const produto = Object.preventExtensions({
-    nome:`Qualquer`, preco: 1
-})
+const obj = {  a:1, b: 2, c: 3, soma(){return a + b + c}}
+console.log(JSON.stringify(obj))
+console.log(JSON.parse('{"a": 1, "b": 2, "c": 3}'))
