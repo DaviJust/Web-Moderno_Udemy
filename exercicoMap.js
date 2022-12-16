@@ -18,3 +18,12 @@ const nomezz = ['Renato', 'Astolfo', 'Carla', 'Michelle'];
 for (let n of nomes) {
  console.log(`${n} saiu do grupo!` );
 }
+
+const gastos = [
+    112.46, //conta de luz
+    42.89, //conta de água
+    799.00, //Aluguel
+    428.9 //mercado
+   ];
+   const total = gastos.reduce((acumulador, atual) => acumulador + atual);
+   console.log(total) 
