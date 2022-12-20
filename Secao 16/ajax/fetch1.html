@@ -11,14 +11,15 @@
     <h1>Estados</h1>
 
     <script>
-        const url = 'dados/estados.json'
-        fetch(url)
-            .then(resp => resp.json())
-            .then(estados => {
-                const itens = estados.reduce(
-                    (html, estado) => html + `<li>${estado.nome}</li>`, ''
-                )
-                document.body.insertAdjacentHTML('beforeend', `<ul>${itens}</ul>`)
-            })
+        var myImage = document.querySelector('img');
+
+fetch('flowers.jpg')
+.then(function(response) {
+  return response.blob();
+})
+.then(function(myBlob) {
+  var objectURL = URL.createObjectURL(myBlob);
+  myImage.src = objectURL;
+});
     </script>
 </body>
