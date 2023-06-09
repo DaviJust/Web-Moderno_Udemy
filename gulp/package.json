@@ -23,5 +23,8 @@
     "gulp-concat": "^2.6.1",
     "gulp-uglify": "^3.0.2",
     "typescript": "^3.3.3333"
+  },
+  "dependencies": {
+    "gulp-typescript": "^6.0.0-alpha.1"
   }
 }
